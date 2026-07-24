@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InterviewHive | Register</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/register.css">
+
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <div class="register-card">
+
+            <a href="index.html" class="back-link">
+                ← Back to Home
+            </a>
+
+            <h1 class="logo">
+                InterviewHive
+            </h1>
+
+            <h2>
+                Create Account 🚀
+            </h2>
+
+            <p class="subtitle">
+                Start your interview preparation journey today.
+            </p>
+
+            <form id="registerForm">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name">
+
+                <small class="error" id="nameError"></small>
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email">
+
+                <small class="error" id="emailError"></small>
+
+                <label>Password</label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password">
+
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        class="eye-btn">
+                        👁
+                    </button>
+
+                </div>
+
+                <small class="error" id="passwordError"></small>
+
+                <label>Confirm Password</label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password">
+
+                    <button
+                        type="button"
+                        id="toggleConfirmPassword"
+                        class="eye-btn">
+                        👁
+                    </button>
+
+                </div>
+
+                <small class="error" id="confirmError"></small>
+
+                <button
+                    type="submit"
+                    class="register-btn">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+            <p class="bottom-text">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

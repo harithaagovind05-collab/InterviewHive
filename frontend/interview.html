@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InterviewHive | AI Interview</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/interview.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2 class="logo">InterviewHive</h2>
+
+        <ul>
+
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+            <li><a href="practice.html">💻 Practice</a></li>
+
+            <li class="active"><a href="interview.html">🤖 AI Interview</a></li>
+
+            <li><a href="#">📊 Progress</a></li>
+
+            <li><a href="#">⚙️ Settings</a></li>
+
+            <li><a href="login.html">🚪 Logout</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <h1>🤖 AI Mock Interview</h1>
+
+            <p>
+                Practice technical interviews with AI, improve your coding skills,
+                and receive instant feedback.
+            </p>
+
+        </header>
+
+        <!-- Setup Card -->
+
+        <section class="setup-card">
+
+            <h2>Interview Setup</h2>
+
+            <div class="form-group">
+
+                <label>💻 Programming Language</label>
+
+                <select id="language">
+
+                    <option value="">Select Language</option>
+                    <option>Java</option>
+                    <option>Python</option>
+                    <option>C++</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>🎯 Difficulty</label>
+
+                <select id="difficulty">
+
+                    <option value="">Select Difficulty</option>
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>🧠 Interview Mode</label>
+
+                <div class="radio-group">
+
+                    <label>
+                        <input type="radio" name="mode" value="Learning">
+                        Learning Mode
+                    </label>
+
+                    <label>
+                        <input type="radio" name="mode" value="Interview">
+                        Interview Mode
+                    </label>
+
+                </div>
+
+            </div>
+
+            <button id="start-btn">
+                🚀 Start Interview
+            </button>
+
+        </section>
+
+        <!-- Bottom Cards -->
+
+        <section class="bottom-section">
+
+            <!-- Tips -->
+
+            <div class="tips-card">
+
+                <h2>💡 Interview Tips</h2>
+
+                <ul>
+
+                    <li>Think before you code.</li>
+
+                    <li>Explain your logic clearly.</li>
+
+                    <li>Consider edge cases.</li>
+
+                    <li>Write clean and readable code.</li>
+
+                    <li>Optimize after solving.</li>
+
+                </ul>
+
+            </div>
+
+            <!-- Statistics -->
+
+            <div class="stats-card">
+
+                <h2>📊 Your Statistics</h2>
+
+                <div class="stat">
+
+                    <span>Completed Interviews</span>
+
+                    <strong>12</strong>
+
+                </div>
+
+                <div class="stat">
+
+                    <span>Average Score</span>
+
+                    <strong>84%</strong>
+
+                </div>
+
+                <div class="stat">
+
+                    <span>Best Score</span>
+
+                    <strong>96%</strong>
+
+                </div>
+
+                <div class="stat">
+
+                    <span>Favourite Language</span>
+
+                    <strong>Java</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/interview.js"></script>
+
+</body>
+
+</html>

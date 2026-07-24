@@ -1,0 +1,351 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0B1120;
+    color:#F8FAFC;
+}
+
+/* ===========================
+   LAYOUT
+=========================== */
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+    width:230px;
+    background:#111827;
+    padding:30px 20px;
+    border-right:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    color:#8B5CF6;
+    font-size:28px;
+    font-weight:800;
+    margin-bottom:50px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin-bottom:12px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.sidebar li a{
+    display:block;
+    padding:15px 18px;
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+}
+
+.sidebar li:hover{
+    background:#1E293B;
+}
+
+.sidebar .active{
+    background:linear-gradient(90deg,#8B5CF6,#A855F7);
+}
+
+.sidebar .active a{
+    color:white;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+.main-content{
+    flex:1;
+    padding:40px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.page-header{
+    margin-bottom:35px;
+}
+
+.page-header h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.page-header p{
+    color:#94A3B8;
+    font-size:17px;
+    line-height:1.7;
+    max-width:700px;
+}
+
+/* ===========================
+   SETUP CARD
+=========================== */
+
+.setup-card{
+    margin-top:40px;
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    padding:40px;
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+}
+
+.setup-card h2{
+    font-size:36px;
+    margin-bottom:35px;
+    font-weight:700;
+}
+.setup-desc{
+    color:#94A3B8;
+    margin-bottom:30px;
+    font-size:17px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.form-group{
+    margin-bottom:25px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:10px;
+    font-size:16px;
+    font-weight:600;
+}
+
+.form-group select{
+    width:100%;
+    padding:15px;
+    background:#0B1120;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:12px;
+    color:white;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.form-group select:focus{
+    border-color:#8B5CF6;
+}
+
+/* ===========================
+   RADIO BUTTONS
+=========================== */
+
+.radio-group{
+    display:flex;
+    gap:30px;
+    margin-top:10px;
+}
+
+.radio-group label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    font-weight:500;
+}
+
+.radio-group input{
+    accent-color:#8B5CF6;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+#start-btn{
+    width:100%;
+    margin-top:10px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#8B5CF6,#A855F7);
+    color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#start-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(139,92,246,.35);
+}
+
+/* ===========================
+   BOTTOM SECTION
+=========================== */
+
+.bottom-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.tips-card,
+.stats-card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:25px;
+}
+
+.tips-card h2,
+.stats-card h2{
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+/* ===========================
+   TIPS
+=========================== */
+
+.tips-card ul{
+    padding-left:20px;
+}
+
+.tips-card li{
+    margin-bottom:15px;
+    color:#CBD5E1;
+    line-height:1.6;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stat{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.stat:last-child{
+    border-bottom:none;
+}
+
+.stat span{
+    color:#CBD5E1;
+}
+
+.stat strong{
+    color:#8B5CF6;
+    font-size:18px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .bottom-section{
+        grid-template-columns:1fr;
+    }
+
+    .radio-group{
+        flex-direction:column;
+        gap:15px;
+    }
+
+}
+.topbar h1{
+    font-size:48px;
+    font-weight:800;
+    margin-bottom:15px;
+    line-height:1.2;
+}
+
+.topbar p{
+    font-size:20px;
+    color:#94A3B8;
+    max-width:700px;
+    line-height:1.8;
+}
+.setup-card label{
+    display:block;
+    font-size:19px;
+    font-weight:600;
+    margin-bottom:12px;
+    margin-top:25px;
+}
+.setup-card select{
+    width:100%;
+    padding:18px 22px;
+    border-radius:15px;
+    background:#0B1120;
+    color:white;
+    border:1px solid #273244;
+    font-size:17px;
+    transition:.3s;
+}
+
+.setup-card select:hover,
+.setup-card select:focus{
+    border-color:#8B5CF6;
+}
+.mode-options{
+    display:flex;
+    gap:40px;
+    margin-top:15px;
+}
+.mode-options label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:18px;
+}
+.start-btn{
+    width:100%;
+    margin-top:45px;
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(90deg,#8B5CF6,#A855F7);
+    color:white;
+    font-size:22px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+.start-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(139,92,246,.4);
+}
+.form-group{
+    margin-bottom:28px;
+}

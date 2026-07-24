@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InterviewHive | Practice</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/practice.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2 class="logo">InterviewHive</h2>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">🏠 Dashboard</a>
+            </li>
+
+            <li class="active">
+                <a href="#">💻 Practice</a>
+            </li>
+
+            <li>
+                <a href="interview.html">🤖 AI Interview</a>
+            </li>
+
+            <li>
+                <a href="#">📊 Progress</a>
+            </li>
+
+            <li>
+                <a href="#">⚙️ Settings</a>
+            </li>
+
+            <li>
+                <a href="#">🚪 Logout</a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <h1>Practice Problems 💻</h1>
+
+        </header>
+
+        <!-- Introduction -->
+
+        <section class="practice-intro">
+
+            <p>
+                Improve your coding skills by solving interview questions
+                from Easy, Medium and Hard levels.
+            </p>
+
+        </section>
+
+        <!-- Search -->
+
+        <div class="search-container">
+
+            <div class="search-box">
+
+                <input
+    type="text"
+    id="searchInput"
+    placeholder="🔍 Search Problems">
+
+                <select id="difficulty-filter">
+    <option value="All">All</option>
+    <option value="Easy">Easy</option>
+    <option value="Medium">Medium</option>
+    <option value="Hard">Hard</option>
+</select>
+
+            </div>
+
+        </div>
+        <div class="problem-count">
+    <p>Total Problems: <span id="count">6</span></p>
+</div>
+
+        <!-- Problem cards will go here -->
+         <section class="problem-list">
+
+    <div class="problem-card easy">
+    <div class="problem-info">
+        <h3>Two Sum</h3>
+        <p>Topic: Arrays</p>
+        <span class="easy-tag">Easy</span>
+    </div>
+   <a href="problem.html" class="solve-btn">
+    Solve →
+</a>
+</div>
+    <div class="problem-card easy">
+        <div class="problem-info">
+            <h3>Valid Parentheses</h3>
+            <p>Topic: Stack</p>
+            <span class="easy-tag">Easy</span>
+        </div>
+       <a href="valid-parentheses.html" class="solve-btn">
+    Solve →
+</a>
+    </div>
+
+    <div class="problem-card medium">
+        <div class="problem-info">
+            <h3>Merge Intervals</h3>
+            <p>Topic: Arrays</p>
+            <span class="medium-tag">Medium</span>
+        </div>
+        <a href="merge-intervals.html" class="solve-btn">Solve →</a>
+    </div>
+
+    <div class="problem-card medium">
+        <div class="problem-info">
+            <h3>Binary Tree Level Order Traversal</h3>
+            <p>Topic: Trees</p>
+            <span class="medium-tag">Medium</span>
+        </div>
+        <a href="binary-tree-level-order-traversal.html" class="solve-btn">Solve →</a>
+    </div>
+
+    <div class="problem-card hard">
+        <div class="problem-info">
+            <h3>Merge K Sorted Lists</h3>
+            <p>Topic: Linked List</p>
+            <span class="hard-tag">Hard</span>
+        </div>
+        <a href="merge-k-sorted-lists.html" class="solve-btn">Solve →</a>
+    </div>
+
+    <div class="problem-card hard">
+        <div class="problem-info ">
+            <h3>Word Ladder</h3>
+            <p>Topic: Graph</p>
+            <span class="hard-tag">Hard</span>
+        </div>
+        <a href="word-ladder.html" class="solve-btn">Solve →</a>
+    </div>
+
+</section>
+    </main>
+
+</div>
+
+<script src="js/practice.js"></script>
+
+</body>
+
+</html>

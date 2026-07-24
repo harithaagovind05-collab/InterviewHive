@@ -1,0 +1,281 @@
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0B1120;
+    color:#F8FAFC;
+}
+
+/* ===========================
+   DASHBOARD LAYOUT
+=========================== */
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+    width:230px;
+    background:#111827;
+    padding:30px 20px;
+    border-right:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    color:#8B5CF6;
+    font-size:28px;
+    font-weight:800;
+    margin-bottom:50px;
+}
+
+.sidebar ul{
+    list-style:none;
+    margin-top:40px;
+}
+
+.sidebar li{
+    margin-bottom:15px;
+    border-radius:16px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.sidebar li a{
+    display:block;
+    padding:16px 20px;
+    color:#F8FAFC;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:500;
+    border-radius:16px;
+    transition:0.3s;
+}
+
+.sidebar li:hover{
+    background:#1E293B;
+}
+
+.sidebar .active{
+    background:linear-gradient(90deg,#8B5CF6,#A855F7);
+}
+
+.sidebar .active a{
+    color:#FFFFFF;
+}
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+.main-content{
+    flex:1;
+    padding:40px;
+}
+
+/* ===========================
+   TOPBAR
+=========================== */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.topbar h1{
+    font-size:34px;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    font-size:24px;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#8B5CF6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:700;
+}
+
+/* ===========================
+   WELCOME CARD
+=========================== */
+
+.welcome-card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:30px;
+    margin-bottom:25px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.welcome-card h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.welcome-card p{
+    color:#94A3B8;
+    line-height:1.8;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+.start-btn{
+    padding:16px 34px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#8B5CF6,#A855F7);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.start-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(139,92,246,.35);
+     border:1px solid #A855F7;
+}
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat-card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:22px;
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(139,92,246,.25);
+}
+
+.stat-card span{
+    font-size:28px;
+}
+
+.stat-card h2{
+    font-size:28px;
+    margin:12px 0 6px;
+}
+
+.stat-card p{
+    color:#94A3B8;
+}
+/* ===========================
+   DASHBOARD BOTTOM
+=========================== */
+
+.dashboard-bottom{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    margin-top:30px;
+}
+
+.activity-card,
+.challenge-card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:25px;
+    align-self: start;
+}
+
+.activity-card h2,
+.challenge-card h2{
+    margin-bottom:25px;
+}
+
+.activity-item{
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+    margin-bottom:22px;
+}
+
+.activity-item span{
+    font-size:24px;
+}
+
+.activity-item h4{
+    margin-bottom:5px;
+}
+
+.activity-item p{
+    color:#94A3B8;
+    font-size:14px;
+}
+
+.challenge-card h3{
+    margin:18px 0;
+    font-size:26px;
+}
+
+.challenge-card p{
+    color:#CBD5E1;
+    margin-bottom:15px;
+}
+
+.easy{
+    color:#22C55E;
+    font-weight:600;
+}
+
+.challenge-card .start-btn{
+    margin-top:15px;
+    width:100%;
+}
+.activity-card,
+.challenge-card{
+    transition:.3s;
+}
+
+.activity-card:hover,
+.challenge-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 50px rgba(139,92,246,.2);
+}
+@media(max-width:900px){
+
+.dashboard-bottom{
+    grid-template-columns:1fr;
+}
+
+.stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}

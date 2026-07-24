@@ -1,0 +1,276 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0B1120;
+    color:#F8FAFC;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Background Glow */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#8B5CF6;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:.12;
+    top:-180px;
+    left:-120px;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#4F46E5;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:.10;
+    bottom:-180px;
+    right:-120px;
+}
+
+/* ===========================
+   LOGIN CARD
+=========================== */
+
+.login-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    z-index:1;
+}
+
+.login-card{
+    width:100%;
+    max-width:450px;
+    background:rgba(17,24,39,.95);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:40px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+    animation:
+        fadeUp .8s ease,
+        float 4s ease-in-out infinite;
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.back-home{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#A78BFA;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.back-home:hover{
+    color:white;
+}
+
+.login-card h1{
+    color:#8B5CF6;
+    font-size:36px;
+    margin-bottom:8px;
+}
+
+.login-card h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#94A3B8;
+    margin-bottom:35px;
+    line-height:1.7;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.1);
+    background:#1E293B;
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus{
+    border-color:#8B5CF6;
+    box-shadow:0 0 0 4px rgba(139,92,246,.18);
+    background:#243044;
+    transition:.3s;
+}
+
+.password-box{
+    position:relative;
+    width:100%;
+}
+
+.eye-btn{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.error{
+    color:#F87171;
+    font-size:13px;
+    min-height:18px;
+    margin:6px 0 16px;
+}
+
+/* ===========================
+   OPTIONS
+=========================== */
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.remember{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+}
+
+.remember input{
+    width:16px;
+    height:16px;
+}
+
+.options a{
+    color:#A78BFA;
+    text-decoration:none;
+}
+
+.options a:hover{
+    color:white;
+}
+/* ===========================
+   BUTTON
+=========================== */
+
+.login-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(90deg,#8B5CF6,#A855F7);
+
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(139,92,246,.35);
+}
+
+/* ===========================
+   SIGNUP
+=========================== */
+
+.signup{
+    text-align:center;
+    margin-top:25px;
+    color:#94A3B8;
+}
+
+.signup a{
+    color:#A78BFA;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.signup a:hover{
+    color:white;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
