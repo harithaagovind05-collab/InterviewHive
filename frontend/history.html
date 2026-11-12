@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>InterviewHive | History</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<canvas id="signalField" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.55;"></canvas>
+<nav class="navbar"><a href="index.html" class="nav-logo">Interview<span>Hive</span></a><ul class="nav-links"><li><a href="history.html">History</a></li><li><a href="interview.html">AI Interview</a></li></ul></nav>
+<section style="position:relative;padding-top:100px">
+  <div style="max-width:1000px;margin:0 auto;position:relative;z-index:1">
+    <h1>Interview History</h1>
+    <p style="color:var(--text-secondary)">Track all previous sessions.</p>
+    <input type="text" id="searchInput" placeholder="Search by language..." style="margin-top:24px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:999px;padding:10px 18px;color:var(--text);font-family:inherit;outline:none;width:100%;max-width:320px">
+    <table style="margin-top:28px;width:100%;border-collapse:collapse;color:var(--text);font-size:0.9rem">
+      <thead><tr style="text-align:left;border-bottom:1px solid var(--border)"><th style="padding:10px 6px">Date</th><th>Language</th><th>Difficulty</th><th>Score</th><th>Status</th><th>Review</th></tr></thead>
+      <tbody id="historyTable">
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td>24 Jul</td><td>Java</td><td>Easy</td><td>92%</td><td>Pass</td><td><a href="report.html" style="color:var(--cyan);text-decoration:none">View</a></td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td>22 Jul</td><td>Java</td><td>Medium</td><td>84%</td><td>Pass</td><td><a href="report.html" style="color:var(--cyan);text-decoration:none">View</a></td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td>20 Jul</td><td>Java</td><td>Hard</td><td>68%</td><td>Retry</td><td><a href="report.html" style="color:var(--cyan);text-decoration:none">View</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<script src="js/history.js"></script>
+<script>
+(function(){
+  const c=document.getElementById('signalField'); if(!c) return; const x=c.getContext('2d'); let w,h,p=[],m={x:-1000,y:-1000}; const r=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function resize(){w=c.width=window.innerWidth;h=c.height=window.innerHeight;} resize(); window.addEventListener('resize',resize);
+  document.addEventListener('mousemove',e=>{m.x=e.clientX;m.y=e.clientY;},{passive:true}); document.addEventListener('mouseleave',()=>{m.x=-1000;m.y=-1000;});
+  for(let i=0;i<35;i++)p.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.15,vy:(Math.random()-0.5)*0.15,r:1+Math.random()*1.5});
+  function d(){ if(r){x.clearRect(0,0,w,h);requestAnimationFrame(d);return;} x.clearRect(0,0,w,h);
+    const gx=m.x>-500?m.x:w*0.65, gy=m.y>-500?m.y:h*0.35; const gr=x.createRadialGradient(gx,gy,0,gx,gy,320); gr.addColorStop(0,'rgba(255,255,255,0.02)'); gr.addColorStop(0.4,'rgba(34,211,238,0.015)'); gr.addColorStop(1,'transparent'); x.fillStyle=gr; x.fillRect(0,0,w,h);
+    for(let i=0;i<p.length;i++){ const pt=p[i]; if(!r&&m.x>-500){ const dx=m.x-pt.x, dy=m.y-pt.y, dist=Math.sqrt(dx*dx+dy*dy); if(dist<170){pt.vx+=(dx/dist)*0.003; pt.vy+=(dy/dist)*0.003;} pt.vx*=0.98; pt.vy*=0.98; } pt.x+=pt.vx; pt.y+=pt.vy; if(pt.x<0||pt.x>w)pt.vx*=-0.5; if(pt.y<0||pt.y>h)pt.vy*=-0.5;
+    x.beginPath(); x.arc(pt.x,pt.y,pt.r,0,Math.PI*2); x.fillStyle='rgba(255,255,255,0.2)'; x.fill(); }
+    for(let i=0;i<p.length;i++) for(let j=i+1;j<p.length;j++){ const dx=p[i].x-p[j].x, dy=p[i].y-p[j].y, dist=Math.sqrt(dx*dx+dy*dy); if(dist<100){x.beginPath();x.moveTo(p[i].x,p[i].y);x.lineTo(p[j].x,p[j].y);x.strokeStyle='rgba(255,255,255,0.06)';x.lineWidth=0.5;x.stroke();}}
+    requestAnimationFrame(d); } d();
+})();
+</script>
+</body>
+</html>

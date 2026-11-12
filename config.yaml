@@ -1,0 +1,10 @@
+litellm_settings:
+  drop_params: true
+  additional_drop_params:
+    - prompt_cache_key
+
+model_list:
+  - model_name: groq-coding
+    litellm_params:
+      model: groq/openai/gpt-oss-120b
+      api_key: os.environ/GROQ_API_KEY

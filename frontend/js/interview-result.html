@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InterviewHive | Results</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/interview-result.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2 class="logo">InterviewHive</h2>
+
+        <ul>
+
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+            <li><a href="practice.html">💻 Practice</a></li>
+
+            <li><a href="interview.html">🤖 AI Interview</a></li>
+
+            <li class="active"><a href="#">📊 Results</a></li>
+
+            <li><a href="#">⚙️ Settings</a></li>
+
+            <li><a href="#">🚪 Logout</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <div class="result-card">
+
+            <div class="success-icon">🎉</div>
+
+            <h1>Interview Completed!</h1>
+
+            <p class="subtitle">
+                Great job completing your mock interview.
+            </p>
+
+            <div class="score-circle">
+
+                <span id="score">4 / 5</span>
+
+            </div>
+
+            <div class="details">
+
+                <div class="detail">
+                    <span>📝 Questions Attempted</span>
+                    <strong id="questions">5</strong>
+                </div>
+
+                <div class="detail">
+                    <span>⏱ Time Taken</span>
+                    <strong id="time">18 mins</strong>
+                </div>
+
+                <div class="detail">
+                    <span>💻 Language</span>
+                    <strong id="language">Java</strong>
+                </div>
+
+                <div class="detail">
+                    <span>🎯 Difficulty</span>
+                    <strong id="difficulty">Medium</strong>
+                </div>
+
+            </div>
+
+            <div class="performance">
+
+                <h3>Performance</h3>
+
+                <span id="performance-text">Excellent ⭐</span>
+
+            </div>
+
+            <div class="buttons">
+
+                <button id="retry-btn">
+                    Try Again
+                </button>
+
+                <button id="dashboard-btn">
+                    Dashboard
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/interview-result.js"></script>
+
+</body>
+
+</html>

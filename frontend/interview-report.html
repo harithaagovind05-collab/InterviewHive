@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>InterviewHive | Interview Intelligence Report</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">InterviewHive</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="interview.html">AI Interview</a></li>
+  </ul>
+</nav>
+
+<header style="position:relative;min-height:92vh;overflow:hidden;padding:140px 6vw 120px;">
+  <div style="position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden;">
+    <div style="position:absolute;width:800px;height:800px;top:-20%;left:-15%;background:radial-gradient(circle at 40% 30%,rgba(255,255,255,0.05),transparent 60%),radial-gradient(circle at 70% 60%,rgba(34,211,238,0.08),transparent 50%);filter:blur(120px);opacity:0.7;"></div>
+    <div style="position:absolute;width:500px;height:500px;bottom:-10%;right:-10%;background:radial-gradient(circle,rgba(255,255,255,0.04),transparent 60%);filter:blur(90px);opacity:0.6;"></div>
+  </div>
+
+  <div style="max-width:1400px;margin:0 auto;position:relative;z-index:1;display:flex;flex-direction:column;gap:6vh;">
+    <div>
+      <p style="font-family:var(--font-display);font-size:0.7rem;letter-spacing:0.14em;color:rgba(255,255,255,0.3);margin-bottom:24px;">INTERVIEW REPORT</p>
+      <h1 style="font-family:var(--font-display);font-weight:700;letter-spacing:-0.06em;line-height:0.92;font-size:clamp(3rem,9vw,8rem);color:#fff;text-wrap:balance;">Intelligence<br>Report.</h1>
+      <p style="margin-top:28px;font-size:1.05rem;color:rgba(255,255,255,0.55);line-height:1.65;max-width:540px;">A structured breakdown of your interview performance, adaptive trajectory, and evaluation evidence.</p>
+    </div>
+
+    <div id="report-container" style="position:relative;z-index:1;">
+      <p style="font-size:0.85rem;color:var(--text-secondary);">Loading session data...</p>
+    </div>
+  </div>
+</header>
+
+</body>
+</html>

@@ -119,7 +119,7 @@ document.getElementById('interview-form').addEventListener('submit', async funct
   const difficulty = document.getElementById('difficulty').value;
   const questions = document.getElementById('questions').value;
   try {
-    const res = await fetch('http://localhost:8000/api/interview/start', {
+    const res = await fetch('http://localhost:8007/api/interview/start', {
       method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({language,difficulty,number_of_questions: parseInt(questions)})
     });
     const data = await res.json();
